@@ -74,4 +74,4 @@ console.log(longestCommonPrefix(['hello','hi','oewao']))
 //console.log(test[0].charAt(9)) --> ''
 
 //console.log(!true) --> false
-//added for commit
+//added for commit......
