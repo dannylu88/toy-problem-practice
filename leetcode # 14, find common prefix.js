@@ -68,7 +68,7 @@ console.log(longestCommonPrefix(['hello','hi','oewao']))
 
 
 
-//var test = ['hello'];
+//var test = ['hello'];;;;---
 
 //console.log(test[0][9]) --> undefined
 //console.log(test[0].charAt(9)) --> ''
