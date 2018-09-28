@@ -1,3 +1,9 @@
+
+/*
+    the below solution doesn't work because it cannot check input like this
+    '([)]', because it only check the count, it has two () and [] so it will pass,
+    but that should be a false
+*/
 const isValid = (string) => {
 	let smallCount = 0;
 	let middleCount = 0;
