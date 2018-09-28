@@ -25,3 +25,31 @@ const isValid = (string) => {
 }
 
 console.log(isValid('([)]'))
+
+
+/*
+below is a working solution using stack
+
+*/
+
+const isValid = (string) => {
+	let storage = [];
+	
+	for (let i = 0; i < string.length; i++){
+		if(string[i] === '(' || string[i] === '[' || string[i] === '{') storage.push(string[i]);
+		else if (string[i] === ')' && storage[storage.length - 1] === '(') {
+			storage.pop();
+		}
+		else if (string[i] === ']' && storage[storage.length - 1] === '[') {
+			storage.pop();
+		}
+		else if (string[i] === '}' && storage[storage.length - 1] === '{') {
+			storage.pop();
+		}
+		else return false;
+	}
+	if(storage.length === 0) return true;
+	else return false;
+}
+
+console.log(isValid(']'))
