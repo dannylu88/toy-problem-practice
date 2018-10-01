@@ -36,7 +36,14 @@ console.log(removeElement([3,2,2,3],3))
 
 
 /*
-
+foreach solution
 
 */
-
+const removeElement = (nums,val) => {
+	nums.forEach((number,index) => {
+		if(number === val) {
+			nums.splice(index,1)
+		}
+	});
+	return nums;
+}
