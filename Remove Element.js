@@ -14,3 +14,29 @@ const removeElement = (nums,val) => {
 
 console.log(removeElement([3,2,2,3],3)) // ---> will be 2, filter all 3
 
+/*
+solution, a one liner using filter
+*/
+const removeElement = (nums,val) => {
+	return nums.filter(number => number !==val)
+}
+
+/*
+solution using for loop
+*/
+
+const removeElement = (nums,val) => {
+	for(let i = 0; i < nums.length; i++){
+		if(nums[i]===val) nums.splice(i,1)
+	}
+	return nums
+}
+
+console.log(removeElement([3,2,2,3],3))
+
+
+/*
+
+
+*/
+
