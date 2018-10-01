@@ -5,13 +5,14 @@ the below solution need to create a new array
 */
 
 const removeDuplicates = (nums) => {
-	let input =[];
+	//create new var to store result
+	let result =[];
 	for(let i = 0; i < nums.length; i++){
-		if (!input.includes(nums[i])){
-			input.push(nums[i])
+		if (!result.includes(nums[i])){
+			result.push(nums[i])
 		}
 	}
-	return input;
+	return result;
 }
 
 
