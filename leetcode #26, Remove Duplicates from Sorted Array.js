@@ -58,6 +58,9 @@ console.log(removeDuplicates([1,1,3,3,4,4,5,5,5,5,5,5,5,6,7,8]))
 
 /*
 forEach also works
+1. This solution doesn't required moving the index because only compare the next to the previous,
+2. So only need to remove the next one, 
+3. example: compare 1 to 1, same, so remove the 2nd 1
 */
 var removeDuplicates = function(nums) {
   nums.forEach((n, index) => {
