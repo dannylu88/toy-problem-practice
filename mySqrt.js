@@ -16,3 +16,31 @@ const mySqrt = (x) => {
 
 console.log(mySqrt('5'))
 
+/*
+the below solution used Babylonian Method(equation)
+
+keep doing this, will get the sqrt root
+(guess + number/guess) * 0.5 = new guess,
+
+then new guess become guess
+
+*/
+
+
+const mySqrt = (x,guess) => {
+	if(x === 1 || x === 0) return x;
+	//assume guess = 0.5 * number
+	if(!guess) guess = x / 2;
+	//Babylonian Method(equation)
+	//(guess + number / guess)*0.5 = new guess
+    let newGuess = (guess + x / guess) * 0.5;
+    //if the guess and newGuess equal, that means it gets the cloest one
+	if(guess === newGuess) return Math.floor(guess);
+	return mySqrt(x,newGuess)
+}
+
+console.log(mySqrt('8'))
+
+//console.log((5.2+27/5.2)*0.5)
+
+
