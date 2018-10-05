@@ -14,3 +14,20 @@ function climbStairs (n) {
     }
     return ways[n];
   }
+
+
+  //same function as the above one
+  var climbStairs = function(n) {
+	let result = 0;
+	let prev1 = 1;
+	let prev2 = 2;
+	let i = 2;
+	if (n <= 0) return 0;
+	if (n <= 2) return n;
+	while (i < n) {
+		i++;
+		result = prev1 + prev2;
+		[prev2,prev1] = [result,prev2];
+	}
+	return result;
+};
