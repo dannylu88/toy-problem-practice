@@ -10,7 +10,7 @@ const searchInsert = (nums, target) => {
             //why not set result = i here?? because if we set it here, i hasn't increase yet!
             //so set it outside
 		}
-		//set index = what we want
+		//set index = what we want.....
 		resultIndex = i;
 	} 
 	return resultIndex;
