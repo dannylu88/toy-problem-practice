@@ -6,3 +6,13 @@ const isSameTree = (p,q) => {
     //recursion check if has reached the end of the tree and recursion
 	return p.val===q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 }
+
+
+var isSameTree = function(p, q){
+    if(p===q) return true;
+	if(p===null || q===null) return false;
+	return p.toString()===q.toString();
+}
+TreeNode.prototype.toString = function(){
+	return 'left'+(this.left? this.left.toString() : 'null')+' '+this.val+' '+'right'+(this.right? this.right.toString():'null');
+}
