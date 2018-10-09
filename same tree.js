@@ -16,3 +16,11 @@ var isSameTree = function(p, q){
 TreeNode.prototype.toString = function(){
 	return 'left'+(this.left? this.left.toString() : 'null')+' '+this.val+' '+'right'+(this.right? this.right.toString():'null');
 }
+
+var isSameTree = function(p, q){
+	return stringify(p)===stringify(q);
+}
+function stringify(root){
+	if(root===null) return 'null';
+	return 'left'+stringify(root.left) + root.val + 'right'+stringify(root.right);
+}
