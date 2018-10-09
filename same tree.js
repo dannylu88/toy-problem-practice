@@ -1,3 +1,4 @@
+//beats 98.62%, 52ms
 const isSameTree = (p,q) => {
     //p and q is the start nodes
     if(p===q) return true;
@@ -7,7 +8,7 @@ const isSameTree = (p,q) => {
 	return p.val===q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 }
 
-
+//beats 98.62%, runtime 52ms
 var isSameTree = function(p, q){
     if(p===q) return true;
 	if(p===null || q===null) return false;
@@ -17,6 +18,7 @@ TreeNode.prototype.toString = function(){
 	return 'left'+(this.left? this.left.toString() : 'null')+' '+this.val+' '+'right'+(this.right? this.right.toString():'null');
 }
 
+//beats 91.44%, 56ms
 var isSameTree = function(p, q){
 	return stringify(p)===stringify(q);
 }
