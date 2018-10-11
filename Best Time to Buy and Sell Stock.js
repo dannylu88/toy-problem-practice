@@ -21,3 +21,15 @@ const testing = (prices) => {
   //the buy and sell situation
   else return Math.max(...prices) - Math.min(...prices);
 }
+
+var maxProfit = function(prices) {
+    let minSoFar = prices[0];
+    let maxProfitSoFar = 0;
+    
+    for(let i = 1; i < prices.length; i++){
+        maxProfitSoFar = Math.max(maxProfitSoFar, prices[i] - minSoFar);
+        minSoFar = Math.min(minSoFar, prices[i]);
+    }
+    
+    return maxProfitSoFar;
+};
