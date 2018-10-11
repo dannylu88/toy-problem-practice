@@ -1,5 +1,5 @@
 /*
-O:number(maximum profit)
+O:number(maximum profit), return 0 if no profitable trade can be made
 I:array of trades
 C:N/A
 E:[7,1,5,3,6,4]   --> 5, you buy when it's 1, and sell it at 6
@@ -13,7 +13,7 @@ const testing = (prices) => {
   //  that means the stock has been going down for the entire day so no trade
   //3. REMEMBER sort will change the original input,
   //   to use sort without changing the original, use [...array].sort()
-  if(JSON.stringify(prices) === JSON.stringify([...prices].sort((a,b) => b-a))) return false;
+  if(JSON.stringify(prices) === JSON.stringify([...prices].sort((a,b) => b-a))) return 0;
 
   //if not, return max - min
   //this DOESN'T work because you can only sell after you buy
