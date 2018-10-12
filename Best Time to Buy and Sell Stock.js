@@ -29,6 +29,13 @@ var maxProfit = function(prices) {
     let maxProfitSoFar = 0;
     
     //iterate the array
+    /*
+     [7,1,5,3,6,4]
+     1st Round:  assume 7 is min, max profit = 0
+     2nd Round:  max(0, 1 - 7 = -6), still max profit = 0, min also update because 1 < 7
+     3rd Ronud:  max(0, 5 - 1 =  4), new max profit = 4, min doesn't update because 5 > 1
+     5th Round:  max (4, 6 - 1 = 5), new max profit = 5, min doesn't update
+    */
     for(let i = 1; i < prices.length; i++){
         //keep updating the maxProfit while iterating the array
         //max (who is larger?) the original maxProfit? or the next element in array - min
