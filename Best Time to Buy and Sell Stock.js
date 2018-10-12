@@ -30,8 +30,11 @@ var maxProfit = function(prices) {
     
     //iterate the array
     for(let i = 1; i < prices.length; i++){
-        //
+        //keep updating the maxProfit while iterating the array
+        //max (who is larger?) the original maxProfit? or the next element in array - min
         maxProfitSoFar = Math.max(maxProfitSoFar, prices[i] - minSoFar);
+        //this will also update the min, which is smaller?
+        //original min? or the next element in array?
         minSoFar = Math.min(minSoFar, prices[i]);
     }
     
