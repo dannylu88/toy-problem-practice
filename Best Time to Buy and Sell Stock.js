@@ -23,10 +23,14 @@ const testing = (prices) => {
 }
 
 var maxProfit = function(prices) {
+    //assume the min price is the first one
     let minSoFar = prices[0];
+    //assume the max profit is 0
     let maxProfitSoFar = 0;
     
+    //iterate the array
     for(let i = 1; i < prices.length; i++){
+        //
         maxProfitSoFar = Math.max(maxProfitSoFar, prices[i] - minSoFar);
         minSoFar = Math.min(minSoFar, prices[i]);
     }
