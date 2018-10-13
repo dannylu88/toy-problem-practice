@@ -19,6 +19,16 @@ var maxProfit = function(prices) {
     var sum=0;
     let len=prices.length;
   for (let i = 0; i <= len; i++ ) {
+      /*
+       this seems weird right? you just compare next element than get the difference?
+       but this is legit, because assume now it's 1, next day is 5, next day is 99,
+       you would buy at 1 sell at 99, so 98,
+       but you can also assume you buy at 1, since it keeps increasing, you will
+       get the sum as (5-1) + (99-5) = 98
+       
+       You just get the difference by chopping off the sums
+
+      */
         if(prices[i]<prices[i+1]){
           sum+=prices[i+1]-prices[i];
         }
