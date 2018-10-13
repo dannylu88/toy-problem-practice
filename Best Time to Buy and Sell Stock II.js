@@ -15,6 +15,7 @@ console.log(maxProfit(test))  ---> 98 --> buy when it's 1 and sell when it's 99,
 
 */
 var maxProfit = function(prices) {
+    //assume the max profix = 0
     var sum=0;
     let len=prices.length;
   for (let i = 0; i <= len; i++ ) {
