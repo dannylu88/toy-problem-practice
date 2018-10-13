@@ -8,6 +8,12 @@ E:[7,1,5,3,6,4] --> buy one day2, 1..sell when 5, 5 - 1 =4
 
 */
 
+
+/*
+test = [7,1,5,99,6,4];
+console.log(maxProfit(test))  ---> 98 --> buy when it's 1 and sell when it's 99, profit = 98
+
+*/
 var maxProfit = function(prices) {
     var sum=0;
     let len=prices.length;
