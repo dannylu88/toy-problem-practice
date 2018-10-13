@@ -7,3 +7,14 @@ E:[7,1,5,3,6,4] --> buy one day2, 1..sell when 5, 5 - 1 =4
                 sum = 4 + 3 = 7
 
 */
+
+var maxProfit = function(prices) {
+    var sum=0;
+    let len=prices.length;
+  for (let i = 0; i <= len; i++ ) {
+        if(prices[i]<prices[i+1]){
+          sum+=prices[i+1]-prices[i];
+        }
+    }
+  return sum;
+};
