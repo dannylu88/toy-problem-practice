@@ -14,6 +14,9 @@ Output: false
 
 */
 
+/*
+there is a better solution using REGEX
+*/
 var isPalindrome = function(s) {
     if (s.length < 2) return true;
     
