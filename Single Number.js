@@ -22,3 +22,12 @@ const singleNumber = (nums) => {
 
 console.log(singleNumber([2,2,3,5,5]))
 
+
+// solution using index
+// if the index of this number === the index of the same number but last occurance,
+// return this number
+var singleNumber = function(nums) {
+    for(var i=0;i<nums.length;i++) {
+        if(nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i])) return nums[i];
+    }
+};
