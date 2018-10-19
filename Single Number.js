@@ -23,7 +23,7 @@ const singleNumber = (nums) => {
 console.log(singleNumber([2,2,3,5,5]))
 
 
-// solution using index
+// solution using index (REALLY SLOW!!!)
 // if the index of this number === the index of the same number but last occurance,
 // return this number
 var singleNumber = function(nums) {
@@ -31,3 +31,4 @@ var singleNumber = function(nums) {
         if(nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i])) return nums[i];
     }
 };
+
