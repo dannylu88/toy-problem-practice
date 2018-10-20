@@ -18,9 +18,40 @@ C: 1.Cannot modify input
 E: see above
 */
 
-const getIntersectionNode = (headA, headB) {
+const getIntersectionNode = (headA, headB) => {
 	//3 while loops
 	//1 while loops, determine different length of 2 linked list
 	//2 while loops, catch up with the pointers
 	//3 while loops, find if there is any intersection
+	
+	if(!headA || !headB) return null;
+	
+	let hA = headA;
+	let hB = headB;
+	let count = 0;
+	
+	while(hA && hB) {
+		hA = hA.next;
+		hB = hB.next;
+		count++;
+	}
+	//if hA is shorter, which means after the above loop, hA reach the end
+	if(hA === null) {
+		while(hB) {
+			hB = hB.next;
+			headB = headB.next;
+		}
+	}
+	else if(hB === null){
+		while(hA) {
+			hA = hA.next;
+			headA = headA.next;
+		}
+	}
+	while(headA && headB) {
+		if(headA === headB) return headA;
+		headA = headA.next;
+		headB = headB.next;
+	}
+	return null;
 }
