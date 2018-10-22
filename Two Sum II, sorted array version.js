@@ -7,7 +7,7 @@ Output: [1,2]
 Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 */
 
-//brutal force solution---> REALLY SLOW!!! 628ms, 0.95%
+//brutal force solution---> REALLY SLOW!!! 628ms
 const twoSum = (numbers, target) => {
 	let indice = [];
 	for(let i = 0; i < numbers.length; i++){
