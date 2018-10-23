@@ -24,19 +24,29 @@ const twoSum = (numbers, target) => {
 
 console.log(twoSum([1,2,3,4,4,9,56,90],8))
 
+//two pointer method, one start from front, one start from the back
 var twoSum = function(numbers, target) {
     i=0;
     j=numbers.length-1;
-    
+	
+	//while i < j, which means before both pointer meet together
     while(i<j) {
-        sum = numbers[i]+numbers[j];
+		//find the sum
+		sum = numbers[i]+numbers[j];
+		//if sum = target, return the index (+1, cuz not using the default index)
         if (sum == target) {
-          return [i+1,j+1];  
+		  return [i+1,j+1];  
+		  //if sum > target, which means the right number is too big,
+		  //move the right pointer to left, to get a smaller number
         } else if(sum > target) {
-            j--;
+			j--;
+			//if it's not anything else, which means sum < target,
+			//whcih means sum is not big enough, so move the left pointer to right,
+			//increase the sum
         } else {
            i++; 
         }
-    }
+	}
+	//if no found, return null
     return null;
 };
