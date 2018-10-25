@@ -50,3 +50,5 @@ var twoSum = function(numbers, target) {
 	//if no found, return null
     return null;
 };
+
+//Binary Solution
