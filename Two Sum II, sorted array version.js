@@ -71,3 +71,14 @@ var twoSum = function(nums, target) {
             return right;
         }
     }
+	let left = 0, right = findNext(0, nums.length - 1, target - nums[0], -1);
+
+    while (nums[left] + nums[right] !== target) {
+        if (nums[left] + nums[right] > target) {
+            right = findNext(left, right - 1, target - nums[left], -1);
+        } else {
+            left = findNext(left + 1, right, target - nums[right], 1);
+        }
+    }
+    return [left + 1, right + 1];
+};
